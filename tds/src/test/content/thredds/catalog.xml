@@ -49,6 +49,7 @@
 
   <dataset name="Test Single Dataset" ID="testDataset" serviceName="odap" urlPath="localContent/testData.nc" dataType="Grid"/>
   <dataset name="Test Grid as Point" ID="testGAP" serviceName="all" urlPath="localContent/testGridAsPoint.nc" dataType="Grid"/>
+  <dataset name="Test Ferret" ID="ferret" serviceName="all" urlPath="localContent/coads_avg.jnl"/>
 
   <dataset name="Test Dap4 Dataset" ID="testDap4Dataset" serviceName="dap4"
            urlPath="cdmUnitTest/ft/coverage/03061219_ruc.nc" dataType="Grid"/>
