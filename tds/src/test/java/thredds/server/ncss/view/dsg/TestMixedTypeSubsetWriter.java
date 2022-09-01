@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import thredds.server.ncss.exception.UnsupportedResponseFormatException;
 import thredds.server.ncss.format.SupportedFormat;
 import ucar.nc2.ft.FeatureDatasetPoint;
 import ucar.nc2.ft2.coverage.CoverageCollection;
@@ -27,7 +28,8 @@ public class TestMixedTypeSubsetWriter {
   @Parameterized.Parameters(name = "{0}")
   public static List<Object[]> getTestParameters() {
     return Arrays.asList(
-        new Object[][] {{SupportedFormat.CSV_FILE, "outputAll.csv"}, {SupportedFormat.XML_FILE, "outputAll.xml"},});
+        new Object[][] {{SupportedFormat.CSV_FILE, "outputAll.csv"}, {SupportedFormat.XML_FILE, "outputAll.xml"},
+                {SupportedFormat.NETCDF3, ""},{SupportedFormat.NETCDF4, ""}});
   }
 
   private final SupportedFormat format;
@@ -66,17 +68,36 @@ public class TestMixedTypeSubsetWriter {
 
   @Test
   public void testMixedPointTypeWithCoverageAsPoint() throws Exception {
+    switch (format) {
+      case CSV_FILE:
+      case XML_FILE:
+        testSuccess();
+        break;
+      case NETCDF3:
+      case NETCDF4:
+      default:
+        testFails();
+    }
+  }
+
+  private void testSuccess() throws Exception {
     File expectedResultFile = new File(
-        getClass().getResource("any_point/" + format.name().toLowerCase() + "/" + expectedResultResource).toURI());
+            getClass().getResource("any_point/" + format.name().toLowerCase() + "/" + expectedResultResource).toURI());
     File actualResultFile = tempFolder.newFile();
 
     try (OutputStream outFileStream = new BufferedOutputStream(new FileOutputStream(actualResultFile))) {
       DsgSubsetWriter subsetWriterFile =
-          DsgSubsetWriterFactory.newInstance(fdPoint, subsetParams, null, outFileStream, format);
+              DsgSubsetWriterFactory.newInstance(fdPoint, subsetParams, null, outFileStream, format);
       subsetWriterFile.write();
     }
     Assert.assertTrue(
-        String.format("Files differed:\n\texpected: %s\n\tactual: %s", expectedResultFile, actualResultFile),
-        DsgSubsetTestUtils.compareText(expectedResultFile, actualResultFile));
+            String.format("Files differed:\n\texpected: %s\n\tactual: %s", expectedResultFile, actualResultFile),
+            DsgSubsetTestUtils.compareText(expectedResultFile, actualResultFile));
+  }
+
+  private void testFails() {
+    Assert.assertThrows(UnsupportedResponseFormatException.class, ()->{
+        DsgSubsetWriterFactory.newInstance(fdPoint, subsetParams, null, null, format);
+    });
   }
 }
