@@ -80,12 +80,10 @@
     <allowRemote>false</allowRemote>
   </DLwriter>
 
-  <!-- nj22Config
-    <ioServiceProvider class="edu.univ.ny.stuff.FooFiles"/>
-    <coordSysBuilder convention="foo" class="test.Foo"/>
-    <coordTransBuilder name="atmos_ln_sigma_coordinates" type="vertical" class="my.stuff.atmosSigmaLog"/>
-    <typedDatasetFactory datatype="Point" class="gov.noaa.obscure.file.Flabulate"/>
-  </nj22Config -->
+  <nj22Config>
+    <ioServiceProvider class="ucar.nc2.iosp.ferret.FerretIOServiceProvider"/>
+    <datasetSource>ucar.nc2.iosp.ferret.FerretDataSource</datasetSource>
+  </nj22Config>
 
   <DiskCache>
     <alwaysUse>false</alwaysUse>
