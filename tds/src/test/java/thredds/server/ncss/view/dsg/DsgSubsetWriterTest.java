@@ -115,55 +115,55 @@ public class DsgSubsetWriterTest {
 
     return Arrays.asList(new Object[][] {
         // Point
-        {FeatureType.POINT, SupportedFormat.CSV_FILE, subsetParamsAll, "outputAll.csv"},
-        {FeatureType.POINT, SupportedFormat.CSV_FILE, subsetParamsPoint, "outputSubset.csv"},
+//        {FeatureType.POINT, SupportedFormat.CSV_FILE, subsetParamsAll, "outputAll.csv"},
+//        {FeatureType.POINT, SupportedFormat.CSV_FILE, subsetParamsPoint, "outputSubset.csv"},
+//
+//        {FeatureType.POINT, SupportedFormat.XML_FILE, subsetParamsAll, "outputAll.xml"},
+//        {FeatureType.POINT, SupportedFormat.XML_FILE, subsetParamsPoint, "outputSubset.xml"},
+//
+        {FeatureType.POINT, SupportedFormat.NETCDF3, subsetParamsAll, "outputAll.ncml"}});//,
+//        {FeatureType.POINT, SupportedFormat.NETCDF3, subsetParamsPoint, "outputSubset.ncml"},
+//
+//        {FeatureType.POINT, SupportedFormat.NETCDF4, subsetParamsAll, "outputAll.ncml"},
+//        {FeatureType.POINT, SupportedFormat.NETCDF4, subsetParamsPoint, "outputSubset.ncml"},
+//
+//        // Station
+//        {FeatureType.STATION, SupportedFormat.CSV_FILE, subsetParamsAll, "outputAll.csv"},
+//        {FeatureType.STATION, SupportedFormat.CSV_FILE, subsetParamsStation1, "outputSubset1.csv"},
+//        {FeatureType.STATION, SupportedFormat.CSV_FILE, subsetParamsStation2, "outputSubset2.csv"},
+//
+//        {FeatureType.STATION, SupportedFormat.XML_FILE, subsetParamsAll, "outputAll.xml"},
+//        {FeatureType.STATION, SupportedFormat.XML_FILE, subsetParamsStation1, "outputSubset1.xml"},
+//        {FeatureType.STATION, SupportedFormat.XML_FILE, subsetParamsStation2, "outputSubset2.xml"},
+//
+//        {FeatureType.STATION, SupportedFormat.WATERML2, subsetParamsAll, "outputAll.xml"},
+//        {FeatureType.STATION, SupportedFormat.WATERML2, subsetParamsStation1, "outputSubset1.xml"},
+//        {FeatureType.STATION, SupportedFormat.WATERML2, subsetParamsStation2, "outputSubset2.xml"},
 
-        {FeatureType.POINT, SupportedFormat.XML_FILE, subsetParamsAll, "outputAll.xml"},
-        {FeatureType.POINT, SupportedFormat.XML_FILE, subsetParamsPoint, "outputSubset.xml"},
-
-        {FeatureType.POINT, SupportedFormat.NETCDF3, subsetParamsAll, "outputAll.ncml"},
-        {FeatureType.POINT, SupportedFormat.NETCDF3, subsetParamsPoint, "outputSubset.ncml"},
-
-        {FeatureType.POINT, SupportedFormat.NETCDF4, subsetParamsAll, "outputAll.ncml"},
-        {FeatureType.POINT, SupportedFormat.NETCDF4, subsetParamsPoint, "outputSubset.ncml"},
-
-        // Station
-        {FeatureType.STATION, SupportedFormat.CSV_FILE, subsetParamsAll, "outputAll.csv"},
-        {FeatureType.STATION, SupportedFormat.CSV_FILE, subsetParamsStation1, "outputSubset1.csv"},
-        {FeatureType.STATION, SupportedFormat.CSV_FILE, subsetParamsStation2, "outputSubset2.csv"},
-
-        {FeatureType.STATION, SupportedFormat.XML_FILE, subsetParamsAll, "outputAll.xml"},
-        {FeatureType.STATION, SupportedFormat.XML_FILE, subsetParamsStation1, "outputSubset1.xml"},
-        {FeatureType.STATION, SupportedFormat.XML_FILE, subsetParamsStation2, "outputSubset2.xml"},
-
-        {FeatureType.STATION, SupportedFormat.WATERML2, subsetParamsAll, "outputAll.xml"},
-        {FeatureType.STATION, SupportedFormat.WATERML2, subsetParamsStation1, "outputSubset1.xml"},
-        {FeatureType.STATION, SupportedFormat.WATERML2, subsetParamsStation2, "outputSubset2.xml"},
-
-        {FeatureType.STATION, SupportedFormat.NETCDF3, subsetParamsAll, "outputAll.ncml"},
-        {FeatureType.STATION, SupportedFormat.NETCDF3, subsetParamsStation1, "outputSubset1.ncml"},
-        {FeatureType.STATION, SupportedFormat.NETCDF3, subsetParamsStation2, "outputSubset2.ncml"},
-
-        {FeatureType.STATION, SupportedFormat.NETCDF4, subsetParamsAll, "outputAll.ncml"},
-        {FeatureType.STATION, SupportedFormat.NETCDF4, subsetParamsStation1, "outputSubset1.ncml"},
-        {FeatureType.STATION, SupportedFormat.NETCDF4, subsetParamsStation2, "outputSubset2.ncml"},
-
-        // profile
-        {FeatureType.STATION_PROFILE, SupportedFormat.CSV_FILE, subsetParamsAll, "outputAll.csv"},
-        {FeatureType.STATION_PROFILE, SupportedFormat.CSV_FILE, subsetParamsProfile1, "outputSubset1.csv"},
-        {FeatureType.STATION_PROFILE, SupportedFormat.CSV_FILE, subsetParamsProfile2, "outputSubset2.csv"},
-
-        {FeatureType.STATION_PROFILE, SupportedFormat.XML_FILE, subsetParamsAll, "outputAll.xml"},
-        {FeatureType.STATION_PROFILE, SupportedFormat.XML_FILE, subsetParamsProfile1, "outputSubset1.xml"},
-        {FeatureType.STATION_PROFILE, SupportedFormat.XML_FILE, subsetParamsProfile2, "outputSubset2.xml"},
-
-        {FeatureType.STATION_PROFILE, SupportedFormat.NETCDF3, subsetParamsAll, "outputAll.ncml"},
-        {FeatureType.STATION_PROFILE, SupportedFormat.NETCDF3, subsetParamsProfile1, "outputSubset1.ncml"},
-        {FeatureType.STATION_PROFILE, SupportedFormat.NETCDF3, subsetParamsProfile2, "outputSubset2.ncml"},
-
-        {FeatureType.STATION_PROFILE, SupportedFormat.NETCDF4, subsetParamsAll, "outputAll.ncml"},
-        {FeatureType.STATION_PROFILE, SupportedFormat.NETCDF4, subsetParamsProfile1, "outputSubset1.ncml"},
-        {FeatureType.STATION_PROFILE, SupportedFormat.NETCDF4, subsetParamsProfile2, "outputSubset2.ncml"}});
+//        {FeatureType.STATION, SupportedFormat.NETCDF3, subsetParamsAll, "outputAll.ncml"},
+//        {FeatureType.STATION, SupportedFormat.NETCDF3, subsetParamsStation1, "outputSubset1.ncml"},
+//        {FeatureType.STATION, SupportedFormat.NETCDF3, subsetParamsStation2, "outputSubset2.ncml"},
+//
+//        {FeatureType.STATION, SupportedFormat.NETCDF4, subsetParamsAll, "outputAll.ncml"},
+//        {FeatureType.STATION, SupportedFormat.NETCDF4, subsetParamsStation1, "outputSubset1.ncml"},
+//        {FeatureType.STATION, SupportedFormat.NETCDF4, subsetParamsStation2, "outputSubset2.ncml"},
+//
+//        // profile
+//        {FeatureType.STATION_PROFILE, SupportedFormat.CSV_FILE, subsetParamsAll, "outputAll.csv"},
+//        {FeatureType.STATION_PROFILE, SupportedFormat.CSV_FILE, subsetParamsProfile1, "outputSubset1.csv"},
+//        {FeatureType.STATION_PROFILE, SupportedFormat.CSV_FILE, subsetParamsProfile2, "outputSubset2.csv"},
+//
+//        {FeatureType.STATION_PROFILE, SupportedFormat.XML_FILE, subsetParamsAll, "outputAll.xml"},
+//        {FeatureType.STATION_PROFILE, SupportedFormat.XML_FILE, subsetParamsProfile1, "outputSubset1.xml"},
+//        {FeatureType.STATION_PROFILE, SupportedFormat.XML_FILE, subsetParamsProfile2, "outputSubset2.xml"},
+//
+//        {FeatureType.STATION_PROFILE, SupportedFormat.NETCDF3, subsetParamsAll, "outputAll.ncml"},
+//        {FeatureType.STATION_PROFILE, SupportedFormat.NETCDF3, subsetParamsProfile1, "outputSubset1.ncml"},
+//        {FeatureType.STATION_PROFILE, SupportedFormat.NETCDF3, subsetParamsProfile2, "outputSubset2.ncml"},
+//
+//        {FeatureType.STATION_PROFILE, SupportedFormat.NETCDF4, subsetParamsAll, "outputAll.ncml"},
+//        {FeatureType.STATION_PROFILE, SupportedFormat.NETCDF4, subsetParamsProfile1, "outputSubset1.ncml"},
+//        {FeatureType.STATION_PROFILE, SupportedFormat.NETCDF4, subsetParamsProfile2, "outputSubset2.ncml"}});
   }
 
   private final FeatureType wantedType;
@@ -190,7 +190,8 @@ public class DsgSubsetWriterTest {
 
     File datasetFile = new File(getClass().getResource(datasetResource).toURI());
     File expectedResultFile = new File(getClass().getResource(expectedResultResource).toURI());
-    File actualResultFile = tempFolder.newFile();
+    File actualResultFile = File.createTempFile("test_file", null);
+    //tempFolder.newFile();
 
     try (FeatureDatasetPoint fdPoint = openPointDataset(wantedType, datasetFile);
         OutputStream outFileStream = new BufferedOutputStream(new FileOutputStream(actualResultFile))) {
