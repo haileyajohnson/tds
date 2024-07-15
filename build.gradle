@@ -37,8 +37,8 @@ buildscript {
     classpath buildPlugins.shadow
     classpath buildPlugins.spotless
     classpath buildPlugins.protobuf
-    classpath buildPlugins.nexus
-    classpath buildPlugins.jekyll
+//    classpath buildPlugins.nexus
+//    classpath buildPlugins.jekyll
     classpath buildPlugins.depcheck
   }
 }
@@ -113,7 +113,7 @@ apply from: "$rootDir/gradle/root/testing.gradle"
 // Generates coverage report for testAll
 apply from: "$rootDir/gradle/root/coverage.gradle"
 // Manages credentials for publishing
-apply from: "$rootDir/gradle/root/publishing.gradle"
+//apply from: "$rootDir/gradle/root/publishing.gradle"
 // Adds "sonarqube" task to the root project
 apply from: "$rootDir/gradle/root/sonarqube.gradle"
 // Adds the spotless tasks to the root project and add check for .gradle files

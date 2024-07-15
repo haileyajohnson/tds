@@ -4,7 +4,7 @@ rootProject.name = 'thredds-data-server'
 // These all refer to subdirectory names.
 include 'dap4:d4servlet'
 include 'dap4:d4ts'
-include 'docs'
+//include 'docs'
 include 'opendap:dtswar'
 include 'opendap:server'
 include 'tdcommon'

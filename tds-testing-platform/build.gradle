@@ -40,10 +40,10 @@ dependencies {
   }
 }
 
-publishing {
-  publications {
-    tdsTestingPlatformBom(MavenPublication) {
-      from components.javaPlatform
-    }
-  }
-}
+//publishing {
+//  publications {
+//    tdsTestingPlatformBom(MavenPublication) {
+//      from components.javaPlatform
+//    }
+//  }
+//}
